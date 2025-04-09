@@ -1,0 +1,1 @@
+{\n  \"name\": \"dad-jokes\",\n  \"version\": \"1.0.0\",\n  \"description\": \"A fun application that generates dad jokes using an API\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"node index.js\"\n  },\n  \"dependencies\": {\n    \"axios\": \"^1.6.7\",\n    \"express\": \"^4.18.2\"\n  },\n  \"author\": \"itsvins63\",\n  \"license\": \"MIT\"\n}
