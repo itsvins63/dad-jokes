@@ -1,1 +1,25 @@
-const express = require('express');\nconst axios = require('axios');\n\nconst app = express();\nconst port = process.env.PORT || 3000;\n\napp.use(express.static('public'));\n\napp.get('/joke', async (req, res) => {\n  try {\n    const response = await axios.get('https://icanhazdadjoke.com/', {\n      headers: {\n        'Accept': 'application/json',\n        'User-Agent': 'Dad Jokes App (https://github.com/itsvins63/dad-jokes)'\n      }\n    });\n    res.json(response.data);\n  } catch (error) {\n    res.status(500).json({ error: 'Failed to fetch joke' });\n  }\n});\n\napp.listen(port, () => {\n  console.log(`Dad jokes app listening at http://localhost:${port}`);});
+const express = require('express');
+const axios = require('axios');
+
+const app = express();
+const port = process.env.PORT || 3001;
+
+app.use(express.static('public'));
+
+app.get('/joke', async (req, res) => {
+  try {
+    const response = await axios.get('https://icanhazdadjoke.com/', {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Dad Jokes App (https://github.com/itsvins63/dad-jokes)'
+      }
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch joke' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Dad jokes app listening at http://localhost:${port}`);
+});

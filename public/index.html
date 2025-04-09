@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dad Jokes Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Dad Jokes Generator</h1>
+        <div class="header">
+            <i class="fas fa-laugh-squint logo-icon"></i>
+            <h1>Dad Jokes Generator</h1>
+        </div>
         <div class="joke-container">
+            <div class="emoji-container">
+                <i class="fas fa-grin-squint-tears joke-emoji"></i>
+            </div>
             <p id="joke-text">Click the button to get a dad joke!</p>
         </div>
-        <button id="get-joke">Get New Joke</button>
+        <button id="get-joke">
+            <i class="fas fa-redo"></i>
+            Get New Joke
+        </button>
     </div>
     <script src="script.js"></script>
 </body>
